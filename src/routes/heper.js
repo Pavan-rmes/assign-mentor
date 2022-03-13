@@ -47,5 +47,11 @@ async function changeMentor(studentMentorData){
 
 }
 
+async function getStudents(mentor){
+    const students = await client.db("node-task3").collection("student").find({mentor:mentor}).toArray()
+    if(students.length)return students
+    return {status:"No student is assigned"}
+}
 
-export {createMentor,createStudent,assignStudent}
+
+export {createMentor,createStudent,assignStudent,getStudents,changeMentor}

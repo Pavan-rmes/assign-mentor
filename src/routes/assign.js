@@ -1,5 +1,5 @@
 import express from "express"
-import {createMentor,createStudent,assignStudent} from "./heper.js"
+import {createMentor,createStudent,assignStudent,getStudents,changeMentor} from "./heper.js"
 
 
 export const assignStu = express.Router()
@@ -23,5 +23,11 @@ assignStu.post("/assign",express.json(),async (req,res)=>{
 
 assignStu.post("/change",express.json(),async (req,res)=>{
     const response = await changeMentor(req.body)
+    res.send(response)
+})
+
+assignStu.get("/show",async (req,res)=>{
+    const {mentor} = req.query
+    const response = await getStudents(mentor)
     res.send(response)
 })
