@@ -1,0 +1,30 @@
+{
+  "name": "assign-mentor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start":"node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pavan-rmes/assign-mentor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pavan-rmes/assign-mentor/issues"
+  },
+  "homepage": "https://github.com/Pavan-rmes/assign-mentor#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongodb": "^4.4.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
