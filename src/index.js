@@ -16,6 +16,10 @@ async function createDbConection(){
     return client
 }
 
+
+app.get("/",(req,res)=>{
+    res.send({"How this server works":"https://documenter.getpostman.com/view/17248871/UVsJvmT7"})
+})
 app.use("/assign",assignStu)
 export const client = await createDbConection()
 
